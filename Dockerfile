@@ -1,8 +1,10 @@
 FROM owasp/zap2docker-stable
 
-RUN pip3 install slackclient
-
 COPY /app /app
+
+RUN pip3 install slackclient \
+# && chown -R zap:zap /app \
+ && chown -R zap:zap /zap
 
 ENTRYPOINT ["python3"]
 
