@@ -59,7 +59,6 @@ def send_slack_notify(slack_client, site, message, emoji):
     )
 
 
-os.system("chown -R zap:zap /zap")
 slack_client = slack.WebClient(slack_token)
 make_zap_filenames()
 run_tests()
