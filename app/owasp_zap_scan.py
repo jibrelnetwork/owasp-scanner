@@ -12,6 +12,8 @@ slack_channel_index = "C014P63V8L8"
 site_list_file = "/app/sites_list.txt"
 slack_token = os.getenv('SLACK_TOKEN')
 
+print("Test script started")
+
 with open(site_list_file) as f:
     sites_list = f.read().splitlines()
 
@@ -57,6 +59,7 @@ def send_slack_notify(slack_client, site, message, emoji):
     )
 
 
+os.system("chown -R zap:zap /zap")
 slack_client = slack.WebClient(slack_token)
 make_zap_filenames()
 run_tests()

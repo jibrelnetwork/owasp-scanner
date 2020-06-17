@@ -1,4 +1,5 @@
 FROM owasp/zap2docker-stable
+USER zap:zap
 
 COPY /app /app
 

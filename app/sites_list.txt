@@ -1,1 +1,2 @@
 jwallet.network
+jcash.network
